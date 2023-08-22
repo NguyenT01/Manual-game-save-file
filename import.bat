@@ -1,13 +1,13 @@
 @ECHO OFF
-ECHO IMPORT SAVE GAME FILES.
+ECHO IMPORT GAME SAVE FILES.
 ECHO ------------------------
 ECHO Game: Kao The Kangaroo 2022
 ECHO Version: GOG
 ECHO ------------------------
 ECHO Select your option:
 ECHO [1] - Import all save files from your current backup files (including Setting files).
-ECHO [2] - Import only save game files.
-ECHO [3] - Export save game files.
+ECHO [2] - Import only game save files.
+ECHO [3] - Export game save files.
 ECHO [0] - Exit
 
 SET SOURCE_FILE=%cd%\KaoGOG
@@ -31,7 +31,7 @@ SETLOCAL ENABLEDELAYEDEXPANSION
     ) ELSE IF %USER_CHOICE% EQU 2 (
         IF NOT EXIST "%DEST_FILE%\Saved" (
             ECHO DESTINATION FILE NOT FOUND.
-            ECHO RUN THE GAME FIRST AND IMPORT SAVE GAME FILES AFTERWARDS.
+            ECHO RUN THE GAME FIRST AND IMPORT GAME SAVE FILES AFTERWARDS.
         ) ELSE (
             IF NOT EXIST "%SAVED_DEST_FILE%\" (
                 MKDIR "%SAVED_DEST_FILE%"
